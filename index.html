@@ -1,0 +1,417 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src='./asianincome.js'></script>
+		<script src='./middleastincome.js'></script>
+		<script src='./easteurope.js'></script>
+		<script src='./westeurope.js'></script>
+		<script src='./anglo.js'></script>
+	    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
+	    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
+
+	</head>
+	<body class="is-preload">
+		
+
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>An Analysis on<br />
+						Sydney's Ethnicity</h1>
+						<p>Iavor Nikolaev : z5208788</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+					
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="#top"><a href="index.html">Top</a></li>
+							<li><a href="#link1">Mesh blocks</a></li>
+							<li><a href="#link2">Data Journalism</a></li>
+							<li><a href="#link3">G08</a></li>
+							<li><a href="#link4">The Latte Line</a></li>
+							<li><a href="#link5">The data</a></li>
+							<li><a href="#link6">Conclusion</a></li>
+						</ul>
+						
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<section>
+								<article>
+									<header>
+										
+										<h2><a name='link1'>Mesh blocks and the Australian Census</a></h2>
+									</header>
+									<a class="image fit"><img src="images/census.png" alt="" /></a>
+									<p>Mesh blocks are bounded two dimensional areas that are overlay Australia’s geography in relation to population people, topology, geography and social features. Their area currently 57523 Statistical Areas Level 1 (SA1) and they are the smallest geographical unit that is currently used to segregate Australia’s land (200-800 population). </br> The Australian census, introduced by the Australian Government in 1911 is a survey that Australia’s adult population takes about many topics including, finance, location and education. The Australian Government then uses this data to strategically manage the nation federally, territorially and locally. After 1961, the Australian Government introduced the five-year interval, where the census was taken and reveiwed every five years. The latest census, conducted in 2016, was the first to introduce the SA1s in attempt to define Australia’s population more accurately and specifically. </p>
+									
+								</article>
+							</section>
+
+						<!-- Posts -->
+						
+							<section>
+								<article>
+									<header>
+										
+										<h2><a name='link2'>Data Journalism</a></h2>
+									</header>
+									<a href='https://www.gapminder.org/tools/#$chart-type=bubbles' class="image fit"><img src="images/bubblesinternet.jpg" alt="" /></a>
+									<p>Data Journalism is the report and distribution of trends through the collection, analysis and communication of data. Data Journalism is gaining acclaim compared to traditional methods of journalism because of its credibility and can now represents many physical and social topics like this website above about Countries’ attributes relative to each over throughout history. </p>
+									
+								</article>
+							</section>
+							<section>
+								<article>
+									<header>
+										
+										<h2><a name='link3'>General Community Profile Table Eight </a></h2>
+									</header>
+									<a class="image fit"><img src="images/g.jpg" alt="" /></a>
+									<p>The 2016 Census of Population and Housing, General Community Profile table eight refers to ancestry by country of birth of parents and may be used predominantly as a resource by both public and private local governing groups in attempt to understand and improve community planning, as well as commercial enterprises attempting to understand and cater to their potential clients in accordance to local ethnicity. Despite this tables vastness, it is restricted as it only shows the top 50 largest populations.  </p>
+									
+								</article>
+							</section>
+							<section>
+								<article>
+									<header>
+										
+										<h2><a name='link4'>Sydney's Latte Line</a></h2>
+									</header>
+									<a class="image fit"><img src="images/lltwo.png" alt="" /></a>
+									<p>The Sydney Latte Line, named after the probably not coincidental location of coffee franchises in Sydney is an imaginary line that runs from Sydney airport, through paramatta and into Sydney’s north west as visualised above. The general trend with acceptance of areas like the shire, Brighton, the Campbelltown, Camden and the Blue mountains is that areas south of the line will have a lower socioeconomic status than those north of it. The example above uses General Community Profile Table 29 to colour grade it, as it measures average weekly household income, and is probably the most relevent and accurate influence on socieoeconomic status and thus the Latte L ine</p>
+									
+								</article>
+							</section>
+							<section>
+								<article>
+									<header>
+
+										<h2><a name="link5">Where does everyone live?</a></h2>
+										<p>Since Sydney and Australia relatively have a very high multiethnic population compared to other countries it will be interesting to find out the degree of influence ethnicity has on Sydney’s latte line. The graphs bellow present Sydney’s top five ancestry by country of birth of parents’ populations (Middle Asia, Anglo-Saxon, Middle eastern, Eastern Europe and Western Europe) in Sydney by location SA1s, where the height of the extrusion represents the relative density of the population and the colour map represents Total Household Income (Weekly) by Household Composition, identical to the map above. </p>
+										<h2><a>Middle Asian Population</a></h2>
+										<p>(China, Japan, Vietnam, Indonesia, Malaysia and India)</p>
+
+									</header>
+									<div id='map' style='width: 100%; height: 400px; float: left'></div>
+									<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiaWF2b3JuaWtvbGFldiIsImEiOiJjamxod3Z0cGswNnE2M3FvMDdsNnlrN3hsIn0.3ExcxNHNQFFUlZTaVHtV3w';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/dark-v9', // stylesheet location
+    center: [151.004105, -33.813002], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+});
+
+map.on('load', function() {
+map.addLayer({
+"id": "data",
+"type": "fill-extrusion",
+"source": {
+'type': 'geojson',
+'data': data
+},
+'paint': {
+'fill-extrusion-color' : {
+'property': 'income',
+"stops":[
+[0.1, 'black'],
+[0.25, '#0E0219'],
+[0.35, '#4E115E'],
+[0.4, '#F06498'],
+[0.5, '#F6F1D1']
+]
+},
+'fill-extrusion-height' : {
+'property': 'asian',
+"stops":[
+[0, 0],
+[500, 3000]
+]
+},
+'fill-extrusion-opacity': 0.7
+}
+});
+});
+
+
+</script>
+									
+									<p> . <br />
+									Sydeny's Asian population is dense through specific hot-spot areas like Ryde, Strafield, Hurstville, Wolli Creek, Alexandria and can be seen substantialy through out most of Sydeny. Those whome live North of the latte line do have a higher houshold income, but not as dramatic as the line itself. 
+									</p>
+									
+								</article>
+								<article>
+									<header>
+							
+										<h2><a>Anglo Saxon Population</a></h2>
+										<p>(British, Australian (English), American and Canadian)</p>
+									</header>
+									<div id='mapfive' style='width: 100%; height: 400px; float: left'></div>
+									<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiaWF2b3JuaWtvbGFldiIsImEiOiJjamxod3Z0cGswNnE2M3FvMDdsNnlrN3hsIn0.3ExcxNHNQFFUlZTaVHtV3w';
+var mapfive = new mapboxgl.Map({
+    container: 'mapfive', // container id
+    style: 'mapbox://styles/mapbox/dark-v9', // stylesheet location
+    center: [151.004105, -33.813002], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+});
+
+mapfive.on('load', function() {
+mapfive.addLayer({
+"id": "datafive",
+"type": "fill-extrusion",
+"source": {
+'type': 'geojson',
+'data': datafive
+},
+'paint': {
+'fill-extrusion-color' : {
+'property': 'income',
+"stops":[
+[0.1, 'black'],
+[0.25, '#0E0219'],
+[0.35, '#4E115E'],
+[0.4, '#F06498'],
+[0.5, '#F6F1D1']
+]
+},
+'fill-extrusion-height' : {
+'property': 'anglo',
+"stops":[
+[0, 0],
+[500, 3000]
+]
+},
+'fill-extrusion-opacity': 0.7
+}
+});
+});
+
+
+</script>
+									<p>.</br>Sydeny's Anglo Saxson population is predominant throughout the entirity of sydney except for the Cantebury and Parramata South regions, and excells in areas like North Sydeny, the Shire, The Inner West and the east coast. The Latte line can clearly be seen through this map as it trails along side jucxtaposing extrusions on its North Face, thus enforcing The Anglo Saxson's much above average weekly houshold income.</p>
+									
+								</article>
+								<article>
+									<header>
+							
+										<h2><a>Middle Eastern Population</a></h2>
+										<p>(Lebanese, Turkish, Syrian, and Armenian)</p>
+									</header>
+									<div id='maptwo' style='width: 100%; height: 400px; float: left'></div>
+									<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiaWF2b3JuaWtvbGFldiIsImEiOiJjamxod3Z0cGswNnE2M3FvMDdsNnlrN3hsIn0.3ExcxNHNQFFUlZTaVHtV3w';
+var maptwo = new mapboxgl.Map({
+    container: 'maptwo', // container id
+    style: 'mapbox://styles/mapbox/dark-v9', // stylesheet location
+    center: [151.004105, -33.813002], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+});
+
+maptwo.on('load', function() {
+maptwo.addLayer({
+"id": "datatwo",
+"type": "fill-extrusion",
+"source": {
+'type': 'geojson',
+'data': datatwo
+},
+'paint': {
+'fill-extrusion-color' : {
+'property': 'income',
+"stops":[
+[0.1, 'black'],
+[0.25, '#0E0219'],
+[0.35, '#4E115E'],
+[0.4, '#F06498'],
+[0.5, '#F6F1D1']
+]
+},
+'fill-extrusion-height' : {
+'property': 'middleeat',
+"stops":[
+[0, 0],
+[200, 3000]
+]
+},
+'fill-extrusion-opacity': 0.7
+}
+});
+});
+
+
+</script>
+									<p>.</br>Sydeny's Middle East population is focused and dense singularly through the Cantebury and liverpool Regions and is predominantly in the very low $50-$80 per week household income zone. This fits in with the Latte line as it is trailing its south face.</p>
+									
+								</article>
+								<article>
+									<header>
+										
+										<h2><a>Estern European Population</a></h2>
+										<p>(Greek, Macedonian, Russian, Serbian, Italian and Hungarian)</p>
+									</header>
+									<div id='mapthree' style='width: 100%; height: 400px; float: left'></div>
+									<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiaWF2b3JuaWtvbGFldiIsImEiOiJjamxod3Z0cGswNnE2M3FvMDdsNnlrN3hsIn0.3ExcxNHNQFFUlZTaVHtV3w';
+var mapthree = new mapboxgl.Map({
+    container: 'mapthree', // container id
+    style: 'mapbox://styles/mapbox/dark-v9', // stylesheet location
+    center: [151.004105, -33.813002], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+});
+
+mapthree.on('load', function() {
+mapthree.addLayer({
+"id": "datathree",
+"type": "fill-extrusion",
+"source": {
+'type': 'geojson',
+'data': datathree
+},
+'paint': {
+'fill-extrusion-color' : {
+'property': 'income',
+"stops":[
+[0.1, 'black'],
+[0.25, '#0E0219'],
+[0.35, '#4E115E'],
+[0.4, '#F06498'],
+[0.5, '#F6F1D1']
+]
+},
+'fill-extrusion-height' : {
+'property': 'easteurope',
+"stops":[
+[0, 0],
+[400, 6000]
+]
+},
+'fill-extrusion-opacity': 0.7
+}
+});
+});
+
+
+</script>
+									<p>.</br>Sydney's Eastern European population is generaly distributed towards Botney Bay, the Georges River and Lidcombe, but can be seen substantialy through out the entirety of east south sydney. Dispite its predominant position south of the latte line, a large amount of the population is in exception areas like brighton and the shire, thus it's average houshold income is not as low as other areas south of the line like Canterbury.      
+									</p>
+									
+								</article>
+								<article>
+									<header>
+										
+										<h2><a>Western European Population</a></h2>
+										<p>(Danish, French, Polish, Spanish and German)</p>
+									</header>
+									<div id='mapfour' style='width: 100%; height: 400px; float: left'></div>
+									<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiaWF2b3JuaWtvbGFldiIsImEiOiJjamxod3Z0cGswNnE2M3FvMDdsNnlrN3hsIn0.3ExcxNHNQFFUlZTaVHtV3w';
+var mapfour = new mapboxgl.Map({
+    container: 'mapfour', // container id
+    style: 'mapbox://styles/mapbox/dark-v9', // stylesheet location
+    center: [151.004105, -33.813002], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+});
+
+mapfour.on('load', function() {
+mapfour.addLayer({
+"id": "datafour",
+"type": "fill-extrusion",
+"source": {
+'type': 'geojson',
+'data': datafour
+},
+'paint': {
+'fill-extrusion-color' : {
+'property': 'income',
+"stops":[
+[0.1, 'black'],
+[0.25, '#0E0219'],
+[0.35, '#4E115E'],
+[0.4, '#F06498'],
+[0.5, '#F6F1D1']
+]
+},
+'fill-extrusion-height' : {
+'property': 'westeurope',
+"stops":[
+[0, 0],
+[200, 6000]
+]
+},
+'fill-extrusion-opacity': 0.7
+}
+});
+});
+
+
+</script>
+									<p>.</br>Sydney's Western European population leans towards the coastline of sydney in areas like the Eastern Suburbs and the North Shore. As both these areas are North the latte line, Western Europeans have a substantialy above average houshold income.</p>
+									
+								</article>
+								
+								
+							</section>
+							<section>
+								<article>
+									<header>
+										
+										<h2><a name='link6'>Conclusion</a></h2>
+									</header>
+								
+									<p>Through the analysis and visualisation of both G08 and G29, we can rank all five groups in order of highest to lowest socioeconomic status:</br> 1. Anglo Saxon</br> 2. Western European</br> 3. Middle Asian</br> 4. Eastern European</br> 5. Middle eastern</br> All groups except Middle Asians tend to densify in certain areas of Sydney, either north or south of Latte Line and this is highlighted in their Average Household income. The most likely reasons for the vast differentiation of household income in different ethnic groups is because it correlates to how wealthy the country of origin is itself. For example, countries in Great Brittan (GDP per Capita) are much wealthier and equally distributed to those in the middle east, thus the same trend is true in the areas of Sydney. Furthermore, the clustering of ethnic groups in Sydney may cause a cycle of relative poverty, as in Children born into a low socioeconomic culture will be promoted to continue to live in the same way.  
+
+             
+</p>
+									
+								</article>
+							</section>
+
+
+						
+							
+
+					</div>
+
+						
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li> Iavor Nikolaev</li><li>Z5208788</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>
